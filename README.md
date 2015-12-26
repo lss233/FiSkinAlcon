@@ -4,7 +4,7 @@
 
 ## ※什么是FiSkinAlcon
 
-FiSkinAlcon是一个基于[Phalcon框架](http://www.phalcon.com/zh/)的Minecraft皮肤站。
+FiSkinAlcon是一个基于[Phalcon框架](https://phalconphp.com/zh/)的Minecraft皮肤站。
 
 ## ※为什么要用FiSkinAlcon
 
