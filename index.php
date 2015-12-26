@@ -1,1 +1,2 @@
-Unknow Error.
+<?php
+echo '如果你看见我了，说明有问题啦!';
