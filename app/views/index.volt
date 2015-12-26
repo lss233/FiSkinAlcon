@@ -148,6 +148,5 @@
         {{ javascript_include('js/metisMenu.min.js') }}        
         {{ javascript_include('js/raphael-min.js') }}
         {{ javascript_include('js/sb-admin-2.js') }}
-        {{ javascript_include('js/utils.js') }}
         {{ javascript_include('js/NProgress.js') }}
 </html>
