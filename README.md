@@ -1,6 +1,7 @@
 # FiSkinAlcon
 
 一个更好、更酷的Minecraft皮肤站。
+>> [项目首页](http://fiskinalcon.lss233.tk)
 
 ## ※什么是FiSkinAlcon
 
