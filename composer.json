@@ -1,6 +1,6 @@
 {
     "require" : {
-        "php": ">=5.6.9",
+        "php": "5.3",
         "phalcon/cphalcon": "dev-master"
     }
 }

@@ -1,29 +1,34 @@
 <?php
 
+error_reporting(E_ALL);
+
+define('APP_PATH', realpath('..'));
+
 try {
 
-    //Register an autoloader
-    $loader = new \Phalcon\Loader();
-    $loader->registerDirs(array(
-        '../app/controllers/',
-        '../app/models/'
-    ))->register();
+    /**
+     * Read the configuration
+     */
+    $config = include APP_PATH . "/app/config/config.php";
 
-    //Create a DI
-    $di = new Phalcon\DI\FactoryDefault();
+    /**
+     * Read auto-loader
+     */
+    include APP_PATH . "/app/config/loader.php";
 
-    //Setting up the view component
-    $di->set('view', function(){
-        $view = new \Phalcon\Mvc\View();
-        $view->setViewsDir('../app/views/');
-        return $view;
-    });
+    /**
+     * Read services
+     */
+    include APP_PATH . "/app/config/services.php";
 
-    //Handle the request
-    $application = new \Phalcon\Mvc\Application();
-    $application->setDI($di);
+    /**
+     * Handle the request
+     */
+    $application = new \Phalcon\Mvc\Application($di);
+
     echo $application->handle()->getContent();
 
-} catch(\Phalcon\Exception $e) {
-     echo "PhalconException: ", $e->getMessage();
+} catch (\Exception $e) {
+    echo $e->getMessage() . '<br>';
+    echo '<pre>' . $e->getTraceAsString() . '</pre>';
 }
