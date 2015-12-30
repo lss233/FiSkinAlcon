@@ -18,6 +18,9 @@ class CheckController extends \Phalcon\Mvc\Controller
     {
 
     }
+    public function emailCheckAction()
+    {
+    }
 
 }
 
