@@ -20,7 +20,7 @@ class SignController extends \Phalcon\Mvc\Controller
     	$user->email = $email;
     	$user->regtime=time();
     	$user->salt=rand(100000,999999);
-    	$user->password=md5('12345678'.$user->salt);
+    	$user->password=md5(md5('12345678').$user->salt);
     	$user->token=$token;
     	$user->token_exptime=$token_exptime;
 
