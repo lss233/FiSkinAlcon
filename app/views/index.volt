@@ -13,7 +13,9 @@
         {{ stylesheet_link('css/sb-admin-2.css') }}
         {{ stylesheet_link('css/morris.css') }}
         {{ stylesheet_link('css/font-awesome.min.css') }}
-        {{ stylesheet_link('css/NProgress.css') }}
+        {{ stylesheet_link('css/nprogress.min.css') }}
+        {{ javascript_include('js/nprogress.min.js') }}
+        <script>NProgress.start();</script>
     </head>
         <div id="wrapper">
             <!--Navigtion -->
@@ -143,10 +145,11 @@
         <div id="page-wrapper">
         {{ content() }}
         </div>
+        <script>NProgress.done();</script>
         {{ javascript_include('js/jquery.min.js') }}
         {{ javascript_include('js/bootstrap.min.js') }}
         {{ javascript_include('js/metisMenu.min.js') }}        
         {{ javascript_include('js/raphael-min.js') }}
         {{ javascript_include('js/sb-admin-2.js') }}
-        {{ javascript_include('js/NProgress.js') }}
+        </body>
 </html>
