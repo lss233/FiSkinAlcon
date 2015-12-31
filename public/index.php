@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(0);
+error_reporting(ERROR | E_WARNING | E_PARSE);
 error_reporting(E_ALL);
 
 define('APP_PATH', realpath('..'));
