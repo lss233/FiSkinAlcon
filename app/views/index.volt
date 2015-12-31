@@ -12,12 +12,12 @@
         {{ stylesheet_link('css/timeline.css') }}
         {{ stylesheet_link('css/sb-admin-2.css') }}
         {{ stylesheet_link('css/morris.css') }}
-        {{ stylesheet_link('css/font-awesone.min.css') }}
+        {{ stylesheet_link('css/font-awesome.min.css') }}
         {{ stylesheet_link('css/NProgress.css') }}
     </head>
         <div id="wrapper">
             <!--Navigtion -->
-            <nav class="nvbar nvbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-traget=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -82,15 +82,15 @@
                     <?php 
                         if($AlreadyLogin){ //这里判断有没有登录
                             //如果已经登录了AlreadyLogin值为True，就显示这个用户菜单
-                            echo '<li>'.Phalcon\Tag:linkTo("user",'<i class="fa fa-user fa-fw"></i> 个人资料').'</li>';
-                            echo '<li>'.Phalcon\Tag:linkTo("user/setting",'<i class="fa fa-gear fa-fw"></i> 设置').'</li>';
+                            echo '<li>'.Phalcon\Tag::linkTo("user",'<i class="fa fa-user fa-fw"></i> 个人资料').'</li>';
+                            echo '<li>'.Phalcon\Tag::linkTo("user/setting",'<i class="fa fa-gear fa-fw"></i> 设置').'</li>';
                             echo '<li class="divider"></li>';
-                            echo '<li>'.Phalcon\Tag:linkTo("user/setting",'<i class="fa fa-sign-out fa-fw"></i> 退出登录').'</li>';
+                            echo '<li>'.Phalcon\Tag::linkTo("user/setting",'<i class="fa fa-sign-out fa-fw"></i> 退出登录').'</li>';
                         
                     } else{
                         //如果没有登录，AlreadyLogin值为False，就显示这个菜单
-                            echo '<li>'.Phalcon\Tag:linkTo("user",'<i class="fa fa-user fa-fw"></i> 登录').'</li>';
-                            echo '<li>'.Phalcon\Tag:linkTo("user/setting",'<i class="fa fa-gear fa-fw"></i> 注册').'</li>';
+                            echo '<li>'.Phalcon\Tag::linkTo("user",'<i class="fa fa-user fa-fw"></i> 登录').'</li>';
+                            echo '<li>'.Phalcon\Tag::linkTo("user/setting",'<i class="fa fa-gear fa-fw"></i> 注册').'</li>';
                     }
                     ?>
                         </li>
@@ -116,23 +116,23 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <?php echo Phalcon\Tag:linkTo("index",'<i class="fa fa-dashboard fa-fw"></i> 仪表盘</a>');?>
+                            <?php echo Phalcon\Tag::linkTo("index",'<i class="fa fa-dashboard fa-fw"></i> 仪表盘</a>');?>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> 皮肤管理<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="flot.html">Flot Charts</a>
-                                    <?php echo Phalcon\Tag:linkTo("skin","皮肤"); ?>
+                                    <?php echo Phalcon\Tag::linkTo("skin","皮肤"); ?>
                                 </li>
                                 <li>
-                                    <?php echo Phalcon\Tag:linkTo("cloak","披风"); ?>
+                                    <?php echo Phalcon\Tag::linkTo("cloak","披风"); ?>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <?php echo Phalcon\Tag:linkTo("charts",'<i class="fa fa-bar-chart-o fa-fw"></i> API调用统计</a>');?>
+                            <?php echo Phalcon\Tag::linkTo("charts",'<i class="fa fa-bar-chart-o fa-fw"></i> API调用统计</a>');?>
                         </li>
                     </ul>
                 </div>
@@ -140,9 +140,9 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-    <body>
+        <div id="page-wrapper">
         {{ content() }}
-    </body>
+        </div>
         {{ javascript_include('js/jquery.min.js') }}
         {{ javascript_include('js/bootstrap.min.js') }}
         {{ javascript_include('js/metisMenu.min.js') }}        
