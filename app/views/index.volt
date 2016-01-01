@@ -87,7 +87,7 @@
                             echo '<li>'.Phalcon\Tag::linkTo("user",'<i class="fa fa-user fa-fw"></i> 个人资料').'</li>';
                             echo '<li>'.Phalcon\Tag::linkTo("user/setting",'<i class="fa fa-gear fa-fw"></i> 设置').'</li>';
                             echo '<li class="divider"></li>';
-                            echo '<li>'.Phalcon\Tag::linkTo("user/setting",'<i class="fa fa-sign-out fa-fw"></i> 退出登录').'</li>';
+                            echo '<li>'.Phalcon\Tag::linkTo("sign/logout",'<i class="fa fa-sign-out fa-fw"></i> 退出登录').'</li>';
                         
                     } else{
                         //如果没有登录，AlreadyLogin值为False，就显示这个菜单
@@ -124,7 +124,6 @@
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> 皮肤管理<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Flot Charts</a>
                                     <?php echo Phalcon\Tag::linkTo("skin","皮肤"); ?>
                                 </li>
                                 <li>
@@ -135,6 +134,9 @@
                         </li>
                         <li>
                             <?php echo Phalcon\Tag::linkTo("charts",'<i class="fa fa-bar-chart-o fa-fw"></i> API调用统计</a>');?>
+                        </li>
+                        <li>
+                            <?php echo Phalcon\Tag::linkTo("help",'<i class="fa fa-bar-chart-o fa-fw"></i> 帮助</a>');?>
                         </li>
                     </ul>
                 </div>
@@ -151,5 +153,6 @@
         {{ javascript_include('js/metisMenu.min.js') }}        
         {{ javascript_include('js/raphael-min.js') }}
         {{ javascript_include('js/sb-admin-2.js') }}
+        {{ javascript_include('js/msgs.js') }}
         </body>
 </html>
