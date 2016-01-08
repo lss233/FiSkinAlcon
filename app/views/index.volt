@@ -34,18 +34,8 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" herf="#">
                         <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a herf="#">
-                                <div>
-                                    <strong>发信人</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>时间</em>
-                                    </span>
-                                </div>
-                                <div>这里是PM(站内信)，不打算在Controller里弄这个，到时候交给Ajax来处理吧 --lss233</div>
-                            </a>
-                        </li>
+                    <ul class="dropdown-menu dropdown-messages PM">
+
                         <li class="divider">这是一个华丽的分割线</li>
                         <li class="divider"></li>
                         <li>
@@ -81,14 +71,14 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                    <?php 
+                    <?php
                         if($AlreadyLogin){ //这里判断有没有登录
                             //如果已经登录了AlreadyLogin值为True，就显示这个用户菜单
                             echo '<li>'.Phalcon\Tag::linkTo("user",'<i class="fa fa-user fa-fw"></i> 个人资料').'</li>';
                             echo '<li>'.Phalcon\Tag::linkTo("user/setting",'<i class="fa fa-gear fa-fw"></i> 设置').'</li>';
                             echo '<li class="divider"></li>';
                             echo '<li>'.Phalcon\Tag::linkTo("sign/logout",'<i class="fa fa-sign-out fa-fw"></i> 退出登录').'</li>';
-                        
+
                     } else{
                         //如果没有登录，AlreadyLogin值为False，就显示这个菜单
                             echo '<li>'.Phalcon\Tag::linkTo("user",'<i class="fa fa-user fa-fw"></i> 登录').'</li>';
@@ -150,7 +140,7 @@
         <script>NProgress.done();</script>
         {{ javascript_include('js/jquery.min.js') }}
         {{ javascript_include('js/bootstrap.min.js') }}
-        {{ javascript_include('js/metisMenu.min.js') }}        
+        {{ javascript_include('js/metisMenu.min.js') }}
         {{ javascript_include('js/raphael-min.js') }}
         {{ javascript_include('js/sb-admin-2.js') }}
         {{ javascript_include('js/msgs.js') }}

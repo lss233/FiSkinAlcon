@@ -1,24 +1,24 @@
 # FiSkinAlcon
 
-一个更好、更酷的Minecraft皮肤站。
->> [项目首页](http://fiskinalcon.lss233.tk)
+һ�����á������MinecraftƤ��վ��
+>> [��Ŀ��ҳ](http://fiskinalcon.lss233.tk)
 
-## ※介绍
+## ������
 
-### ◎什么是FiSkinAlcon
+### ��ʲô��FiSkinAlcon
 
-FiSkinAlcon是一个基于[Phalcon框架](https://phalconphp.com/zh/)的Minecraft皮肤站。
+FiSkinAlcon��һ������[Phalcon���](https://phalconphp.com/zh/)��MinecraftƤ��վ��
 
-### ◎为什么要用FiSkinAlcon
+### ��ΪʲôҪ��FiSkinAlcon
 
-FiSkinAlcon拥有超Cool的界面，可以有效提高服务器的逼格，让你的服务器在众多服务器中脱颖而出。
+FiSkinAlconӵ�г�Cool�Ľ��棬������Ч��߷������ıƸ�����ķ��������ڶ����������ӱ������
 
-## ※搭建
+## ���
 
-### ◎需求环境
+### �����󻷾�
   * MySQL
-  * PHP≥5.3
+  * PHP��5.3
   * PHALCON
 
-## ※已知Bug
+## ����֪Bug
 
