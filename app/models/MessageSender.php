@@ -1,80 +1,49 @@
 <?php
 
-use Phalcon\Mvc\Model\Validator\Email as Email;
-
-class UserAccount extends \Phalcon\Mvc\Model
+class MessageSender extends \Phalcon\Mvc\Model
 {
 
     /**
      *
      * @var integer
      */
-    public $uid;
-
-    /**
-     *
-     * @var string
-     */
-    public $username;
-
-    /**
-     *
-     * @var string
-     */
-    public $password;
-
-    /**
-     *
-     * @var string
-     */
-    public $email;
-
-    /**
-     *
-     * @var string
-     */
-    public $token;
+    public $mid;
 
     /**
      *
      * @var integer
      */
-    public $token_exptime;
+    public $from_uid;
+
+    /**
+     *
+     * @var string
+     */
+    public $from_username;
+
+    /**
+     *
+     * @var string
+     */
+    public $title;
+
+    /**
+     *
+     * @var string
+     */
+    public $content;
 
     /**
      *
      * @var integer
      */
-    public $salt;
+    public $from_deleted;
 
     /**
      *
      * @var integer
      */
-    public $regtime;
-
-    /**
-     * Validations and business logic
-     *
-     * @return boolean
-     */
-    public function validation()
-    {
-        $this->validate(
-            new Email(
-                array(
-                    'field'    => 'email',
-                    'required' => true,
-                )
-            )
-        );
-
-        if ($this->validationHasFailed() == true) {
-            return false;
-        }
-
-        return true;
-    }
+    public $date;
 
     /**
      * Returns table name mapped in the model.
@@ -83,14 +52,14 @@ class UserAccount extends \Phalcon\Mvc\Model
      */
     public function getSource()
     {
-        return 'user_account';
+        return 'message_sender';
     }
 
     /**
      * Allows to query a set of records that match the specified conditions
      *
      * @param mixed $parameters
-     * @return UserAccount[]
+     * @return MessageSender[]
      */
     public static function find($parameters = null)
     {
@@ -101,7 +70,7 @@ class UserAccount extends \Phalcon\Mvc\Model
      * Allows to query the first record that match the specified conditions
      *
      * @param mixed $parameters
-     * @return UserAccount
+     * @return MessageSender
      */
     public static function findFirst($parameters = null)
     {

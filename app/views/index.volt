@@ -1,3 +1,6 @@
+<?php
+global $AlreadyLogin; //声明一下Bootstrap那边的那个变量。{谁让我不会用分发器呢_(:з」∠)_}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -81,8 +84,8 @@
 
                     } else{
                         //如果没有登录，AlreadyLogin值为False，就显示这个菜单
-                            echo '<li>'.Phalcon\Tag::linkTo("user",'<i class="fa fa-user fa-fw"></i> 登录').'</li>';
-                            echo '<li>'.Phalcon\Tag::linkTo("user/setting",'<i class="fa fa-gear fa-fw"></i> 注册').'</li>';
+                            echo '<li>'.Phalcon\Tag::linkTo("sign",'<i class="fa fa-user fa-fw"></i> 登录').'</li>';
+                            echo '<li>'.Phalcon\Tag::linkTo("sign",'<i class="fa fa-gear fa-fw"></i> 注册').'</li>';
                     }
                     ?>
                         </li>

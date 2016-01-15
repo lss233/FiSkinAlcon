@@ -1,4 +1,14 @@
 <?php
+if(!$_COOKIE['Fi_Auth']){
+  setcookie('Fi_Auth','NULL');
+}
+$auth =  $_COOKIE['Fi_Auth'];
+if (!$auth) {
+    $AlreadyLogin=true;
+} else {
+    $AlreadyLogin=false;
+}
+
 error_reporting(0);
 error_reporting(ERROR | E_WARNING | E_PARSE);
 error_reporting(E_ALL);
@@ -33,3 +43,7 @@ try {
     echo $e->getMessage() . '<br>';
     echo '<pre>' . $e->getTraceAsString() . '</pre>';
 }
+$di->set('dispatcher', function() use ($di) {
+    $dispatcher = new Phalcon\Mvc\Dispatcher();
+    return $dispatcher;
+});

@@ -8,6 +8,22 @@ class CheckController extends \Phalcon\Mvc\Controller
     		print_r('{"status":"0","message":"NO ACCESS"}');
     	}
     	parent::initialize();
+
+      public function usernameCheck($vaule){
+        if(UserAccount::find("username = '".$vaule."'")!=0){
+            return(false);
+        } else {
+            return(true);
+        }
+      }
+      public function emailCheck($vaule){
+        if(UserAccount::find("email = '".$vaule."'")!=0){
+            return(false);
+        } else {
+            return true;
+        }
+      }
+
     }
     public function indexAction()
     {
@@ -15,20 +31,11 @@ class CheckController extends \Phalcon\Mvc\Controller
     }
     public function usernameCheckAction()
     {
-        if(UserAccount::find("username = '".$this->request->getPost('username')."'")!=0){
-            print_r(false);
-        } else {
-            print_r(true);
-        }
+      echo usernameCheck($this->request->getPost('username'));
     }
     public function emailCheckAction()
     {
-        if(UserAccount::find("email = '".$this->request->getPost('email')."'")!=0){
-            print_r(false);
-        } else {
-            print_r(true);
-        }
+      echo emailCheck($this->request->getPost('email'));
     }
 
 }
-
