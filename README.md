@@ -1,7 +1,7 @@
 # FiSkinAlcon
 
 Ò»¸ö¸üºÃ¡¢¸ü¿áµÄMinecraftÆ¤·ôÕ¾¡£
->> [ÏîÄ¿Ê×Ò³](http://fiskinalcon.lss233.tk)
+> [ÏîÄ¿Ê×Ò³](http://fiskinalcon.lss233.tk)
 
 ## ¡ù½éÉÜ
 
@@ -18,7 +18,9 @@ FiSkinAlconÓµÓÐ³¬CoolµÄ½çÃæ£¬¿ÉÒÔÓÐÐ§Ìá¸ß·þÎñÆ÷µÄ±Æ¸ñ£¬ÈÃÄãµÄ·þÎñÆ÷ÔÚÖÚ¶à·þÎñÆ÷Ö
 ### ¡òÐèÇó»·¾³
   * MySQL
   * PHP¡Ý5.3
-  * PHALCON
+  * Phalcon 2.0
+
+### ¡ò²½Öè
 
 ## ¡ùÒÑÖªBug
-
+  *ÔÝÎÞ

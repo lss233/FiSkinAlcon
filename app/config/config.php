@@ -20,5 +20,8 @@ return new \Phalcon\Config(array(
         'cacheDir'       => APP_PATH . '/app/cache/',
         'formDir'        => APP_PATH . '/app/forms',
         'baseUri'        => '/FiSkinAlcon/',
+    ),
+    'dev' =>  array(
+      'debug' => true
     )
 ));

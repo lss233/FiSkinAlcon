@@ -1,6 +1,6 @@
 <?php
 
-class CheckController extends \Phalcon\Mvc\Controller
+class IndexController extends ControllerBase
 {
     public function initialize()
     {
@@ -8,22 +8,20 @@ class CheckController extends \Phalcon\Mvc\Controller
     		print_r('{"status":"0","message":"NO ACCESS"}');
     	}
     	parent::initialize();
-
-      public function usernameCheck($vaule){
-        if(UserAccount::find("username = '".$vaule."'")!=0){
-            return(false);
-        } else {
-            return(true);
-        }
+    }
+    public function static usernameCheck($vaule){
+      if(UserAccount::find("username = '".$vaule."'")!=0){
+          return(false);
+      } else {
+          return(true);
       }
-      public function emailCheck($vaule){
-        if(UserAccount::find("email = '".$vaule."'")!=0){
-            return(false);
-        } else {
-            return true;
-        }
+    }
+    public function static emailCheck($vaule){
+      if(UserAccount::find("email = '".$vaule."'")!=0){
+          return(false);
+      } else {
+          return true;
       }
-
     }
     public function indexAction()
     {
